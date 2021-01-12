@@ -13,8 +13,10 @@ public class UserExceptionTest {
     @Test
     public void testConstructorDefaultAddMessage() {
         UserException e = new UserException();
+        Assertions.assertFalse(e.haveMessages());
         Assertions.assertEquals(0, e.getMessages().size());
         e.addMessage("key", "arg");
+        Assertions.assertTrue(e.haveMessages());
         Assertions.assertEquals(1, e.getMessages().size());
         Assertions.assertEquals("key", e.getMessages().get(0).getKey());
         Assertions.assertArrayEquals(new String[]{"arg"}, e.getMessages().get(0).getArgs());
@@ -23,6 +25,7 @@ public class UserExceptionTest {
     @Test
     public void testConstructorWithMessage() {
         UserException e = new UserException("key", "arg");
+        Assertions.assertTrue(e.haveMessages());
         Assertions.assertEquals(1, e.getMessages().size());
         Assertions.assertEquals("key", e.getMessages().get(0).getKey());
         Assertions.assertArrayEquals(new String[]{"arg"}, e.getMessages().get(0).getArgs());
