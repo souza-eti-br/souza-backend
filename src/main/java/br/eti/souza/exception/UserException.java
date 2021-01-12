@@ -50,27 +50,4 @@ public class UserException extends Exception {
     public List<Message> getMessages() {
         return this.messages;
     }
-
-    /**
-     * Retorna as mensagens internacionalizadas em formato json.
-     * @return Mensagens internacionalizadas em formato json.
-     */
-    @Override
-    public String getMessage() {
-        List<String> msgs = new ArrayList<>(this.messages.size());
-        this.messages.forEach(msg -> {
-            StringBuilder json = new StringBuilder("{ \"key\": \"").append(msg.getKey());
-            if (msg.getArgs().length > 0) {
-                json.append("\", \"args\": [ \"").append(String.join("\", \"", msg.getArgs())).append("\" ] }").toString();
-            } else {
-                json.append("\", \"args\": [] }");
-            }
-            msgs.add(json.toString());
-        });
-        if (msgs.isEmpty()) {
-            return "{ \"messages\": [] }";
-        } else {
-            return new StringBuilder("{ \"messages\": [ ").append(String.join(", ", msgs)).append(" ]").toString();
-        }
-    }
 }
