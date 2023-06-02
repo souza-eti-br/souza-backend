@@ -1,12 +1,12 @@
 package br.eti.souza.backend.services;
 
+import br.eti.souza.backend.database.Database;
 import br.eti.souza.exception.SystemException;
 import br.eti.souza.exception.UserException;
 import br.eti.souza.server.Request;
 import br.eti.souza.server.Response;
 import br.eti.souza.server.Service;
-import br.eti.souza.backend.database.Database;
-import javax.json.Json;
+import jakarta.json.Json;
 
 /**
  * Serviço para o status do Servidor.
