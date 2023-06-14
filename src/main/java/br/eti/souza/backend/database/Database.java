@@ -25,7 +25,7 @@ public class Database {
         connectionProps.put("user", "souza");
         connectionProps.put("password", "13sharp7");
         try (var connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souzadb", connectionProps)) {
-            return true;
+            return connection.isValid(1);
         } catch (SQLException e) {
             Database.LOGGER.log(Level.SEVERE, "Ocorreu erro tentando conectar ao banco de dados.", e);
         }
