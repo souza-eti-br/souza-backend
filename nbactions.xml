@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
     <action>
+        <actionName>rebuild</actionName>
+        <packagings>
+            <packaging>*</packaging>
+        </packagings>
+        <goals>
+            <goal>clean</goal>
+            <goal>install</goal>
+        </goals>
+        <properties>
+            <Env.JAVA_HOME>/usr/lib/jvm/java-17-openjdk-17.0.8.0.7-1.fc38.x86_64</Env.JAVA_HOME>
+        </properties>
+    </action>
+    <action>
         <actionName>run</actionName>
         <packagings>
             <packaging>jar</packaging>
@@ -15,6 +28,7 @@
             <exec.appArgs></exec.appArgs>
             <exec.mainClass>br.eti.souza.backend.Main</exec.mainClass>
             <exec.executable>java</exec.executable>
+            <Env.JAVA_HOME>/usr/lib/jvm/java-17-openjdk-17.0.8.0.7-1.fc38.x86_64</Env.JAVA_HOME>
         </properties>
     </action>
     <action>
@@ -33,6 +47,7 @@
             <exec.mainClass>br.eti.souza.backend.Main</exec.mainClass>
             <exec.executable>java</exec.executable>
             <jpda.listen>true</jpda.listen>
+            <Env.JAVA_HOME>/usr/lib/jvm/java-17-openjdk-17.0.8.0.7-1.fc38.x86_64</Env.JAVA_HOME>
         </properties>
     </action>
     <action>
@@ -50,6 +65,7 @@
             <exec.mainClass>br.eti.souza.backend.Main</exec.mainClass>
             <exec.executable>java</exec.executable>
             <exec.appArgs></exec.appArgs>
+            <Env.JAVA_HOME>/usr/lib/jvm/java-17-openjdk-17.0.8.0.7-1.fc38.x86_64</Env.JAVA_HOME>
         </properties>
     </action>
 </actions>
