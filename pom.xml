@@ -23,7 +23,7 @@
         <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
         <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
         <maven.compiler.compilerArgument>-Xlint:unchecked</maven.compiler.compilerArgument>
-        <exec.mainClass>br.eti.souza.server.Main</exec.mainClass>
+        <exec.mainClass>br.eti.souza.backend.Main</exec.mainClass>
     </properties>
     <dependencies>
         <dependency>
