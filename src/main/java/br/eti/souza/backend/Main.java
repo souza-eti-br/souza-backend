@@ -5,8 +5,8 @@ import br.eti.souza.server.Server;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Server.addServicePath("status", new Status());
-        Server.start();
-    }
+  public static void main(String[] args) {
+    Server.addServicePath("status", new Status());
+    Server.start();
+  }
 }
