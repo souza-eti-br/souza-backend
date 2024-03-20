@@ -24,8 +24,6 @@ public class Status extends Service {
   @Override
   protected Response get(Request request) throws SystemException, UserException {
     var response = new Response(200, "OK");
-    //response.addHeader("Access-Control-Allow-Origin", "http://localhost:4200");
-    response.addHeader("Access-Control-Allow-Origin", "https://www.souza.eti.br");
     response.setContentType("text/json");
     var body = Json.createObjectBuilder();
     body.add("name", "Souza Server");

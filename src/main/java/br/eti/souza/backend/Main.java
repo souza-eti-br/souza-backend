@@ -8,6 +8,6 @@ public class Main {
 
   public static void main(String[] args) {
     Server.addServicePath("status", new Status());
-    Server.start(Configuration.getInstance().getAsInteger("server.port", 9000));
+    Server.start(Configuration.getInstance().getAsInteger("server.port", 9000), Configuration.getInstance().get("server.cross-domains"));
   }
 }
